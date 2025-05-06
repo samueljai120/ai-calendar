@@ -3,7 +3,7 @@
  * Plugin Name: AI Calendar
  * Plugin URI: https://wordpress.org/plugins/ai-calendar/
  * Description: A beautiful and responsive calendar plugin for WordPress that automatically displays events with adjustable styling.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Requires at least: 5.8
  * Requires PHP: 7.4
  * Author: Samuel So
@@ -18,7 +18,7 @@
 use AiCalendar\Admin\TemplatePreviewGenerator;
 
 // Define plugin version
-define('AI_CALENDAR_VERSION', '1.0.0');
+define('AI_CALENDAR_VERSION', '1.0.1');
 
 // Prevent direct access
 if (!defined('ABSPATH')) {
