@@ -1,0 +1,227 @@
+.ai-calendar-event-block {
+    padding: 20px;
+    background: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.ai-calendar-event-block .event-summary h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.ai-calendar-event-block .event-summary p {
+    margin: 5px 0;
+}
+
+.ai-calendar-event-block .event-summary strong {
+    display: inline-block;
+    min-width: 80px;
+}
+
+/* Inspector Controls Styling */
+.components-panel__body .components-datetime {
+    margin-bottom: 15px;
+}
+
+.components-panel__body .components-base-control {
+    margin-bottom: 15px;
+}
+
+.components-panel__body .components-range-control {
+    margin-bottom: 20px;
+}
+
+/* Custom Fields Section */
+.components-panel__body .custom-field-row {
+    padding: 10px;
+    background: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.components-panel__body .custom-field-row .components-button.is-destructive {
+    margin-top: 10px;
+}
+
+/* Categories and Tags Section */
+.editor-post-taxonomies__hierarchical-terms-list {
+    margin-bottom: 15px;
+}
+
+.editor-post-taxonomies__hierarchical-terms-input {
+    margin-bottom: 5px;
+}
+
+.editor-post-taxonomies__hierarchical-terms-add {
+    margin-top: 10px;
+}
+
+/* Date Time Picker Enhancements */
+.components-datetime__time {
+    padding-top: 10px;
+}
+
+.components-datetime__time fieldset {
+    margin-bottom: 8px;
+}
+
+/* Toggle Control Styling */
+.components-toggle-control .components-base-control__field {
+    margin-bottom: 15px;
+}
+
+.wp-block-ai-calendar-event-details {
+    margin: 20px 0;
+}
+
+.wp-block-ai-calendar-event-details .event-details-preview {
+    padding: 20px;
+    background: #f8f9fa;
+    border: 1px solid #e2e4e7;
+    border-radius: 4px;
+}
+
+.wp-block-ai-calendar-event-details .event-details-preview h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #1e1e1e;
+    font-size: 1.2em;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e2e4e7;
+}
+
+.wp-block-ai-calendar-event-details .event-details-preview p {
+    margin: 8px 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.wp-block-ai-calendar-event-details .event-details-preview p strong {
+    display: inline-block;
+    min-width: 80px;
+    color: #1e1e1e;
+}
+
+/* Custom Fields Block */
+.wp-block-ai-calendar-custom-fields {
+    margin: 20px 0;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #e2e4e7;
+    border-radius: 4px;
+}
+
+.wp-block-ai-calendar-custom-fields h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #1e1e1e;
+    font-size: 1.2em;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e2e4e7;
+}
+
+.custom-fields-editor .custom-field-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    align-items: flex-start;
+}
+
+.custom-fields-editor .custom-field-row .components-text-control__input {
+    flex: 1;
+}
+
+.custom-fields-editor .add-custom-field {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e2e4e7;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.custom-fields-editor .add-custom-field .components-text-control__input {
+    flex: 1;
+}
+
+.custom-fields-editor .components-button.is-destructive {
+    padding: 0 8px;
+    min-width: 36px;
+    height: 36px;
+    justify-content: center;
+}
+
+.custom-fields-editor .components-button.is-primary {
+    margin-top: 21px;
+    height: 36px;
+}
+
+/* Inspector Controls Styling */
+.components-datetime {
+    padding: 0;
+}
+
+.components-datetime .components-datetime__calendar {
+    margin-left: 0;
+}
+
+.components-panel__body .components-base-control {
+    margin-bottom: 24px;
+}
+
+.components-panel__body .components-base-control:last-child {
+    margin-bottom: 8px;
+}
+
+.components-panel__body .components-base-control__field {
+    margin-bottom: 8px;
+}
+
+.components-panel__body .components-range-control {
+    margin-bottom: 24px;
+}
+
+.components-panel__body .components-range-control .components-range-control__wrapper {
+    margin-left: 0;
+}
+
+/* DateTimePicker Enhancements */
+.components-datetime__time fieldset {
+    margin-bottom: 8px;
+    padding: 0;
+}
+
+.components-datetime__time fieldset:last-child {
+    margin-bottom: 0;
+}
+
+/* Block UI Improvements */
+.block-editor-block-list__block[data-type="ai-calendar/event-details"],
+.block-editor-block-list__block[data-type="ai-calendar/custom-fields"] {
+    margin-top: 0;
+    margin-bottom: 28px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 782px) {
+    .custom-fields-editor .custom-field-row,
+    .custom-fields-editor .add-custom-field {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .custom-fields-editor .components-button.is-destructive {
+        width: 100%;
+        margin-top: 8px;
+    }
+
+    .custom-fields-editor .components-button.is-primary {
+        width: 100%;
+        margin-top: 8px;
+    }
+} 

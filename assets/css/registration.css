@@ -1,0 +1,309 @@
+/* Registration Modal */
+.registration-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    overflow-y: auto;
+}
+
+.registration-modal[aria-hidden="false"] {
+    display: block;
+}
+
+.registration-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+.registration-modal-container {
+    position: relative;
+    background: var(--calendar-background);
+    width: 90%;
+    max-width: 600px;
+    margin: 2rem auto;
+    border-radius: var(--event-radius-base);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+                0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Modal Header */
+.registration-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--calendar-border);
+}
+
+.registration-modal-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--calendar-text);
+}
+
+.close-modal {
+    background: transparent;
+    border: none;
+    color: var(--calendar-text-light);
+    font-size: 1.5rem;
+    line-height: 1;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: var(--event-transition);
+}
+
+.close-modal:hover {
+    color: var(--calendar-text);
+}
+
+/* Modal Content */
+.registration-modal-content {
+    padding: 1.5rem;
+}
+
+/* Event Summary */
+.event-summary {
+    background: var(--calendar-background-alt);
+    padding: 1.25rem;
+    border-radius: var(--event-radius-base);
+    margin-bottom: 2rem;
+}
+
+.event-summary h3 {
+    margin: 0 0 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--calendar-text);
+}
+
+.event-details {
+    color: var(--calendar-text);
+    font-size: 0.875rem;
+}
+
+.event-details p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.event-details i {
+    color: var(--calendar-primary);
+    font-size: 1rem;
+}
+
+/* Form Sections */
+.form-section {
+    margin-bottom: 2rem;
+    border: none;
+    padding: 0;
+}
+
+.form-section legend {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--calendar-text);
+    margin-bottom: 1rem;
+    padding: 0;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--calendar-text);
+    margin-bottom: 0.5rem;
+}
+
+.form-group .required {
+    color: #EF4444;
+    margin-left: 0.25rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--calendar-border);
+    border-radius: var(--event-radius-base);
+    background: var(--calendar-background);
+    color: var(--calendar-text);
+    font-size: 1rem;
+    transition: var(--event-transition);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--calendar-primary);
+    box-shadow: 0 0 0 3px rgba(var(--calendar-primary-rgb), 0.1);
+}
+
+.form-group .help-text {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--calendar-text-light);
+    margin-top: 0.5rem;
+}
+
+/* Checkbox Groups */
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-top: 0.25rem;
+}
+
+.checkbox-group label {
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+.checkbox-group a {
+    color: var(--calendar-primary);
+    text-decoration: none;
+}
+
+.checkbox-group a:hover {
+    text-decoration: underline;
+}
+
+/* Form Actions */
+.form-actions {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.submit-registration {
+    background: var(--calendar-primary);
+    color: #fff;
+    border: none;
+    border-radius: var(--event-radius-base);
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--event-transition);
+}
+
+.submit-registration:hover {
+    background: var(--calendar-accent);
+    transform: translateY(-1px);
+}
+
+.submit-registration:disabled {
+    background: var(--calendar-text-light);
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Loading State */
+.submit-registration.loading {
+    position: relative;
+    color: transparent;
+}
+
+.submit-registration.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin: -0.625rem 0 0 -0.625rem;
+    border: 2px solid #fff;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.75s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Validation States */
+.form-group.has-error input,
+.form-group.has-error select,
+.form-group.has-error textarea {
+    border-color: #EF4444;
+}
+
+.form-group.has-error .help-text {
+    color: #EF4444;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+    .registration-modal-container {
+        width: 95%;
+        margin: 1rem auto;
+    }
+
+    .registration-modal-header {
+        padding: 1rem;
+    }
+
+    .registration-modal-content {
+        padding: 1rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .registration-modal-container {
+        background: var(--calendar-background);
+    }
+
+    .event-summary {
+        background: var(--calendar-background-alt);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        background: var(--calendar-background);
+        border-color: var(--calendar-border);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        border-color: var(--calendar-primary);
+    }
+} 

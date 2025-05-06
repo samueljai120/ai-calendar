@@ -1,0 +1,80 @@
+.ai-calendar-block-preview {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 40px;
+    text-align: center;
+}
+
+.calendar-preview-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+}
+
+.calendar-preview-placeholder .dashicons {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    color: #64748b;
+    margin-bottom: 16px;
+}
+
+.calendar-preview-placeholder h3 {
+    margin: 0 0 8px;
+    font-size: 1.5em;
+    color: #1e293b;
+}
+
+.calendar-preview-placeholder p {
+    margin: 0;
+    color: #64748b;
+    font-size: 1.1em;
+}
+
+/* Inspector Controls */
+.components-panel__body .components-base-control {
+    margin-bottom: 24px;
+}
+
+.components-panel__body .components-base-control:last-child {
+    margin-bottom: 8px;
+}
+
+.components-panel__body .components-base-control__label {
+    margin-bottom: 8px;
+    display: block;
+}
+
+.components-panel__body .components-select-control__input,
+.components-panel__body .components-toggle-control .components-form-toggle {
+    margin-right: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 782px) {
+    .ai-calendar-block-preview {
+        padding: 24px;
+    }
+
+    .calendar-preview-placeholder {
+        min-height: 160px;
+    }
+
+    .calendar-preview-placeholder .dashicons {
+        font-size: 36px;
+        width: 36px;
+        height: 36px;
+        margin-bottom: 12px;
+    }
+
+    .calendar-preview-placeholder h3 {
+        font-size: 1.25em;
+    }
+
+    .calendar-preview-placeholder p {
+        font-size: 1em;
+    }
+} 

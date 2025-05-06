@@ -1,0 +1,108 @@
+name: Release Workflow
+
+on:
+  push:
+    branches: [ main ]
+    tags:
+      - 'v*'
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'
+          extensions: mbstring, intl, mysqli, zip
+          tools: composer:v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Install Dependencies
+        run: |
+          composer install
+          npm ci
+
+      - name: Run Tests
+        run: |
+          composer run-script test
+          npm run lint:js
+          npm run lint:css
+
+      - name: Build Assets
+        run: npm run build
+
+      # Create development version (full repository)
+      - name: Create Development Archive
+        run: |
+          mkdir -p dist/development
+          rsync -av --exclude-from='.gitignore' . dist/development/
+          cd dist/development
+          zip -r ../../ai-calendar-dev.zip .
+
+      # Create distribution version (clean package)
+      - name: Create Distribution Archive
+        run: |
+          mkdir -p dist/distribution
+          rsync -av --exclude-from='.distignore' . dist/distribution/
+          cd dist/distribution
+          zip -r ../../ai-calendar.zip .
+
+      # Upload development version as artifact
+      - name: Upload Development Version
+        uses: actions/upload-artifact@v2
+        with:
+          name: ai-calendar-development
+          path: ai-calendar-dev.zip
+
+      # Upload distribution version as artifact
+      - name: Upload Distribution Version
+        uses: actions/upload-artifact@v2
+        with:
+          name: ai-calendar-distribution
+          path: ai-calendar.zip
+
+  # Create GitHub Release when a tag is pushed
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/')
+
+    steps:
+      - name: Download Development Version
+        uses: actions/download-artifact@v2
+        with:
+          name: ai-calendar-development
+          
+      - name: Download Distribution Version
+        uses: actions/download-artifact@v2
+        with:
+          name: ai-calendar-distribution
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            ai-calendar-dev.zip
+            ai-calendar.zip
+          body: |
+            ## AI Calendar Plugin Release
+            
+            ### Development Version
+            - Full repository with development files
+            - For developers and contributors
+            
+            ### Distribution Version
+            - Clean plugin package
+            - For WordPress installation
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 

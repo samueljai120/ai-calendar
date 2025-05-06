@@ -1,0 +1,67 @@
+# Development Files
+.git
+.github
+.gitignore
+.distignore
+.editorconfig
+.eslintrc.js
+.stylelintrc.js
+.phpcs.xml
+phpunit.xml.dist
+composer.json
+composer.lock
+package.json
+package-lock.json
+webpack.config.js
+tsconfig.json
+
+# Development Directories
+/node_modules
+/tests
+/scripts
+/.wordpress-org
+/.git
+
+# Build Process
+/src
+/assets/src
+*.map
+*.ts
+!*.d.ts
+
+# Documentation
+CONTRIBUTING.md
+CHANGELOG.md
+README.md
+/docs
+
+# Development Tools
+.travis.yml
+.scrutinizer.yml
+.phpcs.xml
+phpcs.xml
+.phpcs.xml.dist
+phpcs.xml.dist
+phpunit.xml
+phpunit.xml.dist
+.travis.yml
+.gitlab-ci.yml
+.gitattributes
+.editorconfig
+.eslintignore
+.eslintrc
+.prettierrc
+.stylelintrc
+
+# IDE/Editor Files
+.idea
+.vscode
+*.sublime-project
+*.sublime-workspace
+
+# Misc
+*.zip
+*.tar.gz
+*.log
+.DS_Store
+Thumbs.db 

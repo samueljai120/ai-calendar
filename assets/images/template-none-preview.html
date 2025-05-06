@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: #f0f2f5;
+        }
+        .preview {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            aspect-ratio: 16/9;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+        .content {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        h1 {
+            margin: 0 0 20px;
+            font-size: 32px;
+            color: #1a202c;
+            font-weight: 600;
+        }
+        .meta {
+            color: #4a5568;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .featured-image {
+            width: 100%;
+            height: 240px;
+            background: url('https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=800&q=80');
+            background-size: cover;
+            background-position: center;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        .description {
+            color: #2d3748;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .watermark {
+            text-align: center;
+            margin-top: 20px;
+            color: #a0aec0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="preview">
+        <div class="content">
+            <h1>Event Title</h1>
+            <div class="meta">
+                December 25, 2024 • 2:00 PM - 5:00 PM • 123 Event Location
+            </div>
+            <div class="featured-image"></div>
+            <div class="description">
+                Default WordPress post layout without custom styling.
+                Uses your theme's standard post template for a consistent look.
+            </div>
+            <div class="watermark">
+                Using Default Theme Template
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

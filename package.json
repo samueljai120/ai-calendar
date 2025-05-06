@@ -1,0 +1,35 @@
+{
+    "name": "ai-calendar",
+    "version": "1.0.0",
+    "description": "A beautiful and responsive WordPress calendar plugin",
+    "author": "Wing B",
+    "license": "GPL-2.0-or-later",
+    "scripts": {
+        "build": "wp-scripts build",
+        "start": "wp-scripts start",
+        "lint:js": "wp-scripts lint-js",
+        "lint:css": "wp-scripts lint-style",
+        "lint:pkg-json": "wp-scripts lint-pkg-json",
+        "format:js": "wp-scripts format",
+        "packages-update": "wp-scripts packages-update"
+    },
+    "devDependencies": {
+        "@wordpress/scripts": "^26.0.0",
+        "@wordpress/eslint-plugin": "^14.0.0",
+        "@wordpress/prettier-config": "^2.0.0",
+        "@wordpress/stylelint-config": "^21.0.0",
+        "eslint": "^8.0.0",
+        "prettier": "^2.8.0",
+        "stylelint": "^14.0.0"
+    },
+    "dependencies": {
+        "@fullcalendar/core": "^6.0.0",
+        "@fullcalendar/daygrid": "^6.0.0",
+        "@fullcalendar/interaction": "^6.0.0",
+        "@fullcalendar/list": "^6.0.0",
+        "@fullcalendar/timegrid": "^6.0.0",
+        "@wordpress/components": "^25.0.0",
+        "@wordpress/element": "^5.0.0",
+        "@wordpress/i18n": "^4.0.0"
+    }
+} 

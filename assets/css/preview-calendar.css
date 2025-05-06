@@ -1,0 +1,102 @@
+.preview-calendar {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    padding: 1rem;
+}
+
+.preview-calendar .calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.preview-calendar .calendar-header button {
+    background: none;
+    border: none;
+    color: #2271b1;
+    cursor: pointer;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.preview-calendar .calendar-header button:hover {
+    background: #f0f0f1;
+}
+
+.preview-calendar .current-month {
+    font-weight: 500;
+    color: #1d2327;
+    font-size: 1.1rem;
+}
+
+.preview-calendar .weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.preview-calendar .weekday {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #646970;
+    padding: 0.5rem;
+}
+
+.preview-calendar .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5rem;
+}
+
+.preview-calendar .day {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    color: #1d2327;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.preview-calendar .day:not(.empty):hover {
+    background: #f0f7ff;
+    color: #2271b1;
+}
+
+.preview-calendar .day.empty {
+    background: none;
+    cursor: default;
+}
+
+.preview-calendar .day.today {
+    background: #f0f7ff;
+    color: #2271b1;
+    font-weight: 500;
+}
+
+.preview-calendar .day.active {
+    background: #2271b1;
+    color: #fff;
+    font-weight: 500;
+}
+
+.preview-calendar .day.has-events:after {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: currentColor;
+    opacity: 0.5;
+} 

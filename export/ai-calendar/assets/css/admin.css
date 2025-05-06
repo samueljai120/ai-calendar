@@ -1,0 +1,621 @@
+/* Admin Menu Icon */
+#adminmenu .toplevel_page_ai-calendar .wp-menu-image img {
+    width: 20px;
+    height: 20px;
+    padding: 7px 0;
+}
+
+/* Settings Page */
+.ai-calendar-settings {
+    max-width: 800px;
+    margin: 20px 0;
+}
+
+.ai-calendar-settings .form-table {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.ai-calendar-settings .form-table th {
+    padding: 20px 10px 20px 0;
+    width: 200px;
+}
+
+.ai-calendar-settings .form-table td {
+    padding: 15px 10px;
+}
+
+/* Color Picker */
+.ai-calendar-settings .wp-picker-container {
+    display: inline-block;
+}
+
+.ai-calendar-settings .wp-picker-container .wp-color-result.button {
+    margin: 0 6px 0 0;
+}
+
+/* Input Fields */
+.ai-calendar-settings input[type="text"],
+.ai-calendar-settings input[type="number"],
+.ai-calendar-settings select {
+    min-width: 200px;
+}
+
+.ai-calendar-settings .description {
+    color: #666;
+    font-style: italic;
+    margin-top: 4px;
+}
+
+/* Section Headers */
+.ai-calendar-settings h2 {
+    font-size: 1.5em;
+    margin: 2em 0 1em;
+    padding: 0;
+}
+
+/* Event Meta Box */
+.ai-calendar-event-details {
+    padding: 10px;
+}
+
+.ai-calendar-event-details p {
+    margin: 0 0 15px;
+}
+
+.ai-calendar-event-details label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.ai-calendar-event-details input[type="datetime-local"],
+.ai-calendar-event-details input[type="text"],
+.ai-calendar-event-details input[type="color"] {
+    width: 100%;
+    max-width: 300px;
+}
+
+.ai-calendar-event-details input[type="color"] {
+    padding: 0;
+    width: 100px;
+    height: 30px;
+}
+
+/* Dashboard Page */
+.ai-calendar-dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.ai-calendar-dashboard .card {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.ai-calendar-dashboard .card h3 {
+    margin: 0 0 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Instructions Page */
+.ai-calendar-instructions {
+    max-width: 800px;
+    margin: 20px 0;
+}
+
+.ai-calendar-instructions .card {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.ai-calendar-instructions h2 {
+    margin: 0 0 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.ai-calendar-instructions code {
+    background: #f5f5f5;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 782px) {
+    .ai-calendar-settings .form-table th {
+        padding-bottom: 10px;
+        width: auto;
+    }
+
+    .ai-calendar-settings .form-table td {
+        padding: 0 10px 15px;
+    }
+
+    .ai-calendar-dashboard {
+        grid-template-columns: 1fr;
+    }
+}
+
+.theme-settings-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.theme-settings-form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.theme-section {
+    margin-bottom: 2rem;
+}
+
+.theme-preview {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 32px;
+}
+
+.theme-option {
+    display: inline-block;
+    margin: 0 1rem 1rem 0;
+    padding: 1.5rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.theme-option.active {
+    border-color: #2271b1;
+    background: #f0f6fc;
+}
+
+.theme-option h4 {
+    margin: 0 0 1rem;
+}
+
+.color-palette {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.color-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.color-preview {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+}
+
+.layout-option {
+    display: inline-block;
+    margin: 0 1rem 1rem 0;
+    padding: 1.5rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.layout-option.active {
+    border-color: #2271b1;
+    background: #f0f6fc;
+}
+
+.layout-option h4 {
+    margin: 0 0 1rem;
+}
+
+.layout-option ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.layout-option li {
+    margin-bottom: 0.5rem;
+    color: #666;
+}
+
+.color-field {
+    margin-bottom: 1rem;
+}
+
+.color-field label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+@media (max-width: 1200px) {
+    .theme-settings-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .theme-preview {
+        position: static;
+    }
+}
+
+/* General Styles */
+.ai-calendar-wrap {
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.ai-calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Dashboard Grid */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Dashboard Cards */
+.dashboard-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-card h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 0;
+    color: #2d3748;
+    font-size: 1.2em;
+}
+
+.dashboard-card h2 .dashicons {
+    color: #4a5568;
+}
+
+/* Quick Stats */
+.stats-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.stats-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.stats-list li:last-child {
+    border-bottom: none;
+}
+
+.stat-value {
+    font-weight: bold;
+    color: #3182ce;
+}
+
+/* Quick Start */
+.shortcode-display {
+    display: block;
+    background: #f7fafc;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+.copy-shortcode {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.copy-shortcode.copied {
+    background-color: #48bb78;
+    border-color: #48bb78;
+    color: white;
+}
+
+/* Recent Events */
+.recent-events-list {
+    margin-top: 10px;
+}
+
+.event-item {
+    display: flex;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.event-item:last-child {
+    border-bottom: none;
+}
+
+.event-thumbnail {
+    width: 60px;
+    height: 60px;
+}
+
+.event-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.event-details {
+    flex: 1;
+}
+
+.event-details h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.1em;
+}
+
+.event-meta {
+    display: flex;
+    gap: 15px;
+    color: #718096;
+    font-size: 0.9em;
+}
+
+.event-meta span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Quick Links */
+.quick-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    background: #f7fafc;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #4a5568;
+    transition: all 0.2s;
+}
+
+.quick-link-item:hover {
+    background: #edf2f7;
+    color: #2d3748;
+}
+
+.quick-link-item .dashicons {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    margin-bottom: 8px;
+}
+
+/* Instructions */
+.instruction-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.instruction-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.instruction-steps {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.instruction-steps li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* Settings Pages */
+.ai-calendar-settings {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 782px) {
+    .ai-calendar-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .header-actions {
+        justify-content: center;
+    }
+    
+    .dashboard-grid,
+    .instruction-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .quick-links-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .event-meta {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+/**
+ * AI Calendar Admin Styles
+ */
+
+/* Event Meta Box */
+.ai-calendar-meta-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 800px;
+    padding: 5px;
+}
+
+.ai-calendar-meta-box .form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.ai-calendar-meta-box input[type="date"],
+.ai-calendar-meta-box input[type="time"],
+.ai-calendar-meta-box input[type="text"],
+.ai-calendar-meta-box input[type="url"] {
+    width: 100%;
+    max-width: 300px;
+    padding: 6px 8px;
+    border-radius: 4px;
+}
+
+.ai-calendar-meta-box label {
+    font-weight: 600;
+}
+
+/* Block Editor Styles */
+.components-panel__body .components-panel__row {
+    margin-bottom: 16px;
+}
+
+.components-base-control__label {
+    font-weight: 600 !important;
+}
+
+/* Time Fields */
+.time-field {
+    transition: opacity 0.2s ease, height 0.2s ease;
+    overflow: hidden;
+}
+
+.time-field.hidden {
+    opacity: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Calendar Preview */
+.calendar-preview {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f8f8f8;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Color Picker */
+.wp-picker-container {
+    display: inline-block;
+}
+
+/* Date Range Fields */
+.date-range-fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.date-range-fields > div {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* Make full day checkbox more visible */
+input[name="_event_is_full_day"],
+input[name="all_day"] {
+    margin-right: 6px;
+}
+
+label[for="_event_is_full_day"],
+label[for="all_day"] {
+    font-weight: 700;
+    color: #1e1e1e;
+    padding: 8px 12px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+/* Responsive Design */
+@media (min-width: 782px) {
+    .ai-calendar-meta-box .form-row {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .ai-calendar-meta-box .form-row label {
+        width: 120px;
+        flex-shrink: 0;
+    }
+    
+    .ai-calendar-meta-box .form-row:first-child label {
+        width: auto;
+    }
+} 

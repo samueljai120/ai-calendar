@@ -1,0 +1,114 @@
+# Dependencies
+/node_modules/
+/vendor/
+composer.phar
+package-lock.json
+composer.lock
+yarn.lock
+
+# IDE/Editor Files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.phpstorm*
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Build/Test Files
+.phpunit.result.cache
+.phpcs.cache
+.php_cs.cache
+.sass-cache/
+*.css.map
+*.js.map
+/tests/
+/coverage/
+/build/
+/dist/
+
+# Development Environment
+.env
+.env.*
+docker-compose.yml
+docker-compose.override.yml
+
+# Temporary/Cache Files
+*.log
+.cache/
+/tmp/
+/temp/
+
+# Distribution Files
+*.zip
+*.tar.gz
+
+# WordPress Development
+wp-content/
+wp-admin/
+wp-includes/
+.htaccess
+
+# Keep these files
+!assets/
+!includes/
+!templates/
+!languages/
+!ai-calendar.php
+!readme.txt
+!LICENSE
+!README.md
+
+# Development Tools
+.travis.yml
+.scrutinizer.yml
+.phpcs.xml
+phpcs.xml
+.phpcs.xml.dist
+phpcs.xml.dist
+phpunit.xml
+phpunit.xml.dist
+.gitlab-ci.yml
+.gitattributes
+.editorconfig
+.eslintignore
+.eslintrc
+.prettierrc
+.stylelintrc
+
+# IDE/Editor Files
+.komodoproject
+.komodotools/
+.eclipse/
+.settings/
+.project
+.buildpath
+.metadata
+*.swp
+*.bak
+*.tmp
+
+# Development Dependencies
+bower_components/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Build/Test Files
+.php_cs.dist
+*.css.map
+*.js.map
+
+# Development Environment
+!.env.example
+config.local.php
+
+# Temporary/Cache Files
+*.sql
+*.sqlite
+*.zip
+
+# Testing
+tests/
+coverage/ 

@@ -1,0 +1,91 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php-versions: ['7.4', '8.0', '8.1']
+        wordpress-versions: ['5.8', '6.0', '6.1']
+
+    services:
+      mysql:
+        image: mysql:5.7
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: wordpress_test
+        ports:
+          - 3306:3306
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-versions }}
+          extensions: mbstring, intl, mysqli, zip
+          tools: composer:v2, phpunit:9.6
+
+      - name: Install dependencies
+        run: |
+          composer install --prefer-dist --no-progress
+          npm ci
+
+      - name: Run PHP CodeSniffer
+        run: composer run-script phpcs
+
+      - name: Run PHPUnit tests
+        run: composer run-script test
+
+      - name: Run ESLint
+        run: npm run lint:js
+
+      - name: Run Stylelint
+        run: npm run lint:css
+
+      - name: Build assets
+        run: npm run build
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'
+          extensions: mbstring, intl, mysqli, zip
+          tools: composer:v2
+
+      - name: Install dependencies
+        run: |
+          composer install --no-dev --prefer-dist --no-progress
+          npm ci
+
+      - name: Build assets
+        run: npm run build
+
+      - name: Create release archive
+        run: |
+          mkdir release
+          rsync -av --exclude-from='.distignore' . release/
+          cd release
+          zip -r ../ai-calendar.zip .
+
+      - name: Upload release artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: ai-calendar
+          path: ai-calendar.zip 

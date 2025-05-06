@@ -1,0 +1,440 @@
+/* Registration Meta Box Styles */
+.registration-meta {
+    padding: 12px;
+    background: #fff;
+}
+
+.registration-meta p {
+    margin: 0 0 16px;
+}
+
+.registration-meta label {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.registration-meta select {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 4px;
+}
+
+/* Status Colors */
+.registration-meta select option[value="pending"] {
+    color: #B45309;
+}
+
+.registration-meta select option[value="confirmed"] {
+    color: #059669;
+}
+
+.registration-meta select option[value="cancelled"] {
+    color: #DC2626;
+}
+
+/* Registration Details Section */
+.registration-details {
+    margin-top: 24px;
+    padding: 16px;
+    background: #F9FAFB;
+    border: 1px solid #E5E7EB;
+    border-radius: 4px;
+}
+
+.registration-details h3 {
+    margin: 0 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #E5E7EB;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.registration-details p {
+    margin: 0 0 12px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.registration-details p:last-child {
+    margin-bottom: 0;
+}
+
+.registration-details label {
+    color: #6B7280;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.registration-details a {
+    color: #2563EB;
+    text-decoration: none;
+}
+
+.registration-details a:hover {
+    text-decoration: underline;
+}
+
+/* Registration List Table */
+.post-type-ai_calendar_registration .wp-list-table {
+    margin-top: 16px;
+}
+
+.post-type-ai_calendar_registration .wp-list-table th {
+    font-weight: 600;
+}
+
+.post-type-ai_calendar_registration .wp-list-table td {
+    vertical-align: middle;
+}
+
+.post-type-ai_calendar_registration .column-status {
+    width: 100px;
+}
+
+.registration-status {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 9999px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.registration-status.status-pending {
+    background: #FEF3C7;
+    color: #B45309;
+}
+
+.registration-status.status-confirmed {
+    background: #D1FAE5;
+    color: #059669;
+}
+
+.registration-status.status-cancelled {
+    background: #FEE2E2;
+    color: #DC2626;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .registration-details {
+        background: #1F2937;
+        border-color: #374151;
+    }
+
+    .registration-details h3 {
+        border-color: #374151;
+    }
+
+    .registration-details label {
+        color: #9CA3AF;
+    }
+
+    .registration-details a {
+        color: #60A5FA;
+    }
+
+    .registration-status.status-pending {
+        background: rgba(180, 83, 9, 0.2);
+    }
+
+    .registration-status.status-confirmed {
+        background: rgba(5, 150, 105, 0.2);
+    }
+
+    .registration-status.status-cancelled {
+        background: rgba(220, 38, 38, 0.2);
+    }
+}
+
+/* Admin Interface Variables */
+:root {
+    --admin-primary: #2271b1;
+    --admin-success: #00a32a;
+    --admin-warning: #dba617;
+    --admin-error: #d63638;
+    --admin-bg: #f0f0f1;
+    --admin-card-bg: #fff;
+    --admin-border: #c3c4c7;
+    --admin-text: #1d2327;
+    --admin-text-light: #646970;
+    --admin-radius: 4px;
+    --admin-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    --admin-transition: all 0.2s ease;
+}
+
+/* Statistics Dashboard */
+.registration-stats {
+    margin: 20px 0;
+    padding: 20px;
+    background: var(--admin-card-bg);
+    border-radius: 8px;
+    box-shadow: var(--admin-shadow);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    padding: 20px;
+    border-radius: var(--admin-radius);
+    background: var(--admin-bg);
+    text-align: center;
+    transition: var(--admin-transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+}
+
+.stat-card.total::before { background: var(--admin-primary); }
+.stat-card.pending::before { background: var(--admin-warning); }
+.stat-card.confirmed::before { background: var(--admin-success); }
+.stat-card.cancelled::before { background: var(--admin-error); }
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--admin-text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.stat-value {
+    display: block;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--admin-text);
+    transition: transform 0.2s ease;
+}
+
+/* Registration Status Styles */
+.registration-status {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--admin-transition);
+    user-select: none;
+}
+
+.registration-status::after {
+    content: '▼';
+    font-size: 8px;
+    margin-left: 6px;
+    opacity: 0;
+    transition: var(--admin-transition);
+}
+
+.registration-status:hover::after {
+    opacity: 1;
+}
+
+.status-pending {
+    background: #fff7e6;
+    color: var(--admin-warning);
+}
+
+.status-confirmed {
+    background: #e6ffea;
+    color: var(--admin-success);
+}
+
+.status-cancelled {
+    background: #ffe6e6;
+    color: var(--admin-error);
+}
+
+/* Quick Status Menu */
+.status-quick-menu {
+    display: none;
+    position: absolute;
+    background: var(--admin-card-bg);
+    border-radius: var(--admin-radius);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    min-width: 150px;
+    padding: 8px 0;
+    animation: slideIn 0.2s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.status-option {
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: var(--admin-transition);
+    display: flex;
+    align-items: center;
+}
+
+.status-option::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.status-option[data-status="pending"]::before {
+    background: var(--admin-warning);
+}
+
+.status-option[data-status="confirmed"]::before {
+    background: var(--admin-success);
+}
+
+.status-option[data-status="cancelled"]::before {
+    background: var(--admin-error);
+}
+
+.status-option:hover {
+    background: var(--admin-bg);
+}
+
+/* Table Enhancements */
+.wp-list-table {
+    background: var(--admin-card-bg);
+    border-radius: var(--admin-radius);
+    box-shadow: var(--admin-shadow);
+    border: 1px solid var(--admin-border);
+}
+
+.wp-list-table th {
+    background: var(--admin-bg);
+}
+
+.wp-list-table tr {
+    transition: var(--admin-transition);
+}
+
+.wp-list-table tr:hover {
+    background: #f8f9fa;
+}
+
+/* Row Actions */
+.row-actions {
+    transition: var(--admin-transition);
+    opacity: 0;
+}
+
+tr:hover .row-actions {
+    opacity: 1;
+}
+
+/* Search Box Enhancement */
+.search-box input[type="search"] {
+    border-radius: var(--admin-radius);
+    border: 1px solid var(--admin-border);
+    padding: 6px 12px;
+    transition: var(--admin-transition);
+}
+
+.search-box input[type="search"]:focus {
+    border-color: var(--admin-primary);
+    box-shadow: 0 0 0 1px var(--admin-primary);
+    outline: none;
+}
+
+/* Bulk Actions Enhancement */
+.tablenav select {
+    border-radius: var(--admin-radius);
+    border: 1px solid var(--admin-border);
+    padding: 4px 24px 4px 8px;
+    transition: var(--admin-transition);
+}
+
+.tablenav select:focus {
+    border-color: var(--admin-primary);
+    box-shadow: 0 0 0 1px var(--admin-primary);
+}
+
+/* Notifications */
+.notice {
+    border-radius: var(--admin-radius);
+    border-left-width: 4px;
+    box-shadow: var(--admin-shadow);
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --admin-bg: #1d2327;
+        --admin-card-bg: #2c3338;
+        --admin-border: #2f2f2f;
+        --admin-text: #f0f0f1;
+        --admin-text-light: #a7aaad;
+    }
+
+    .stat-card {
+        background: var(--admin-card-bg);
+    }
+
+    .wp-list-table tr:hover {
+        background: #32373c;
+    }
+
+    .status-pending {
+        background: rgba(219, 166, 23, 0.1);
+    }
+
+    .status-confirmed {
+        background: rgba(0, 163, 42, 0.1);
+    }
+
+    .status-cancelled {
+        background: rgba(214, 54, 56, 0.1);
+    }
+
+    .status-quick-menu {
+        background: var(--admin-card-bg);
+        border: 1px solid var(--admin-border);
+    }
+
+    .status-option:hover {
+        background: #32373c;
+    }
+} 
